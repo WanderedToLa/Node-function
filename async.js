@@ -28,5 +28,3 @@ fs.readFile('./readme.txt' , (err , data) => {
 
     console.log('4번' , data.toString());
 })
-
-// mac first
