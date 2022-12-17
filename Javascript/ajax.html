@@ -8,6 +8,27 @@
   </head>
   <body>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script></script>
+    <script>
+      axios
+        .get('https://www.zerocho.com/api/get')
+        .then((result) => {
+          console.log(result)
+          console.log(result.data)
+        })
+        .catch((error) => {
+          console.log(error)
+        })(async () => {
+        try {
+          const result = await axios.post('https://www.zerocho.com/api/post/json', {
+            name: 'wooseok',
+            birth: 1998,
+          })
+          console.log(result)
+          console.log(result.data)
+        } catch (error) {
+          console.log(error)
+        }
+      })()
+    </script>
   </body>
 </html>
